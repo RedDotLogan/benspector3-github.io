@@ -2,10 +2,12 @@
         font-family: testFont;
     }
 body {
-    background: rgb(201, 56, 56);
+    background-image: url("../img/bg.png");
+    background-color: white;
     color: rgb(45, 45, 45);
     padding: 10px;
     font-family: arial;
+    zoom: 120%
 }
 header {
     font-size: 1.5em;
@@ -24,11 +26,14 @@ nav {
     display: flex;
     padding: 10px;
     margin-bottom: 20px;
-    border: 2px solid ;
+    border: 3px solid ;
     border-radius: 2em / 5em;
 }
 nav h1 {
     color: white;
+    font-family: "Montserrat", "Adobe Blank";
+    font-weight: 800;
+    font-style: normal;
 }
 nav header {
     display: flex;
@@ -44,15 +49,21 @@ nav li {
     padding:  10px;
 
 }
+
 nav a {
     text-decoration: none;
     color: #fff;
 }
 
+li a:hover {
+    box-shadow: inset 0 0px 0 rgb(168,37,18), inset 0 -1px 0 rgb(168,37,18) ;
+}
+
 /* main container area beneath menu */
 main {
-    background: rgb(255, 254, 244);
+    background: rgb(255, 254, 252);
     display: flex;
+    border: 3px solid black;
 }
 
 main img {
@@ -97,4 +108,37 @@ main img {
 #portfolio a {
     text-decoration: none;
     color: #454545;
+}
+
+/* Centre the form within the page */
+form {
+    margin:0 auto;
+    width:459px;
+}
+
+/* Style the text boxes */
+input, textarea {
+	width:439px;
+	height:27px;
+	background:#efefef;
+	border: 3px solid #dedede;
+	padding: 10px;
+	margin-top:3px;
+	margin-bottom: 5px;
+	font-size:0.9em;
+	color:#3a3a3a;
+}
+
+textarea {
+	height:213px;
+	font-family: Arial;
+}
+
+input:focus, textarea:focus {
+    border:3px solid #f74344;
+}
+
+#submit {
+    padding-bottom: 25px;
+    width:439px;
 }

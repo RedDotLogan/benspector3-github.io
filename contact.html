@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Logan's Website</title>
+        <title>Contact me</title>
         <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
@@ -17,20 +17,19 @@
                 </ul>
             </nav>
             <main>
-                <div class="sidebar">
-                    <img src="img/me.jpg" width="250">
-                </div>
                 <div class="content">
-                    <h1>Logan Henry</h1>
-                    <p>Student at Northshore High</p>
-                    <section class="interests">
-                        <h2>Interests</h2>
-                        <ul>
-                            <li>Music</li>
-                            <li>Graphic Design</li>
-                            <li>Programming</li>
-                        </ul>
-                    </section>
+                    <h1>Contact me</h1>
+                    <div id="form">
+                        <form action="mail.php" method="post">
+                            <label>Name</label>
+                            <input name="name" placeholder="Type Here">
+                            <label>Email</label>
+                            <input name="email" type="email" placeholder="Type Here">
+                            <label>Message</label>
+                            <textarea name="message" placeholder="Type Here"></textarea>
+                            <input id="submit" name="submit" type="submit" value="Submit">
+                        </form>
+                    </div>
                 </div>
             </main>
         </div>
