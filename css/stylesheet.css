@@ -3,12 +3,11 @@
     }
 body {
     background-image: url("../img/bg.png");
-
     background-color: white;
     color: rgb(45, 45, 45);
     padding: 10px;
     font-family: arial;
-    zoom: 140%
+    zoom: 120%
 }
 header {
     font-size: 1.5em;
@@ -17,7 +16,6 @@ header {
 #all-contents {
     max-width: 800px;
     margin: auto;
-    
 }
 
 /* navigation menu */
@@ -47,8 +45,7 @@ nav ul {
 }
 nav li {
     display: inline-block;
-    padding:  10px;
-
+    padding: 12px;
 }
 
 /* box-shadow: inset 0 0px 0 rgb(255,255,255), inset 0 -1px 0 rgb(201,56,56) ; */
@@ -58,11 +55,14 @@ nav a {
     color: #fff;
 }
 
-li a:hover {
-    text-decoration: underline;
-    text-decoration-color: rgb(188, 56, 56);
+#navitem:hover {
+    background-color: rgb(234, 19, 19);
+}
+#navitem {
+    padding: 4px 5px;
 }
 
+   
 /* main container area beneath menu */
 main {
     background: rgb(255, 254, 252);
@@ -72,7 +72,7 @@ main {
 
 main img {
     border-style: solid;
-    border-color: rgb(244, 66, 66);
+    border-color: rgb(177, 9, 9);
 }
 .sidebar {
     margin-right: 25px;
@@ -85,10 +85,10 @@ main img {
     flex: 1;
     padding: 15px;
 }
-.content h1 {
+h1 .content {
     color:black;
 }
-.interests header {
+header .interests {
     font-size: 1.25em;
 }
 

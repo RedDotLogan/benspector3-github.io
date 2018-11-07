@@ -18,13 +18,32 @@
 			top: 300px;
 			left: 0px;
 			background-color: rgb(244, 66, 66);
-			font-size: 300%;
+			font-size: 180%;
+			font-family: arial;
 			text-align: center;
+			font-weight: bold;
+		}
+		
+		body {
+			font-family: arial;
+			font-size: 2em;
+		}
+		
+		h4 {
+			margin-top: -5px;
+		}
+		
+		h6 {
+			margin-top: -30px;
 		}
 	</style>
 
 </head>
-<body class="board">
+<body>
+	<h4>Your score: <span id="score"></span></h4>
+	<!--<h6>Clicks: <span id="clicks"></span></h6>-->
+	
+<div class="board">
 	<!-- HTML for the box -->
 	<div class="box">?</div>
 
@@ -39,6 +58,8 @@
 			var boardWidth;
 			var update;
 			var handleBoxClick;
+			var handleClick;
+			var clicks;
 
 			// jQuery stuff setup for you
 			box = $('.box');
@@ -53,11 +74,14 @@
 			direction = 1;
 			position = 0;
 			points = 0;
+			clicks = 0;
 			speed = 10;
 			
 			box.css('left', position);
 			position;
 			box.text(points);
+			
+			
 			
 			update = function() {
 				position = position + (direction*speed);
@@ -71,10 +95,16 @@
     			box.text(points);
 			};
 			
+			handleClick = function() {
+				clicks = clicks + 1;
+				document.getElementById('clicks').innerHTML = clicks;
+			};
+			
 			handleBoxClick = function() {
 				speed = speed + 3;
 				position = 0;
 				points = points + 1;
+				document.getElementById('score').innerHTML = points;
 			};
 
 
@@ -83,7 +113,9 @@
 			// this calls the handle handleBoxClick function every time the box is clicked on
 			box.on('click', handleBoxClick);
 			
+			
 		})();
 	</script>
+</div>
 </body>
 </html>
